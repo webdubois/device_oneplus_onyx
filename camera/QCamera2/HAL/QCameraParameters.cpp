@@ -2825,8 +2825,9 @@ int32_t QCameraParameters::setMCEValue(const QCameraParameters& params)
  *              NO_ERROR  -- success
  *              none-zero failure code
  *==========================================================================*/
-int32_t QCameraParameters::setDISValue(const QCameraParameters& params)
+int32_t QCameraParameters::setDISValue(__attribute__((unused)) const QCameraParameters& params)
 {
+#if 0
     const char *str = params.get(KEY_QC_DIS);
     const char *prev_str = get(KEY_QC_DIS);
     if (str != NULL) {
@@ -2835,6 +2836,7 @@ int32_t QCameraParameters::setDISValue(const QCameraParameters& params)
             return setDISValue(str);
         }
     }
+#endif
     return NO_ERROR;
 }
 
@@ -5745,8 +5747,9 @@ int32_t QCameraParameters::setCDSMode(const QCameraParameters& params)
  *              NO_ERROR  -- success
  *              none-zero failure code
  *==========================================================================*/
-int32_t QCameraParameters::setDISValue(const char *disStr)
+int32_t QCameraParameters::setDISValue(__attribute__((unused)) const char *disStr)
 {
+#if 0
     if (disStr != NULL) {
         int32_t value = lookupAttr(ENABLE_DISABLE_MODES_MAP,
                                    sizeof(ENABLE_DISABLE_MODES_MAP)/sizeof(QCameraMap),
@@ -5766,6 +5769,8 @@ int32_t QCameraParameters::setDISValue(const char *disStr)
     }
     ALOGE("Invalid DIS value: %s", (disStr == NULL) ? "NULL" : disStr);
     return BAD_VALUE;
+#endif
+    return NO_ERROR;
 }
 
 /*===========================================================================
