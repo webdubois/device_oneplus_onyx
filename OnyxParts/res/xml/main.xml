@@ -62,4 +62,11 @@
 			android:persistent="false" />
 	</PreferenceCategory>-->
 
+	<PreferenceCategory
+        android:title="@string/graphics_title">
+		<CheckBoxPreference
+			android:key="hbm"
+			android:summary="@string/hbm_mode_summary"
+			android:title="@string/hbm_mode_title" />
+	</PreferenceCategory>
 </PreferenceScreen>
