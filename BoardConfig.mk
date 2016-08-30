@@ -172,6 +172,11 @@ BOARD_SEPOLICY_DIRS += \
 # SnapDragon LLVM Compiler
 TARGET_USE_SDCLANG := true
 
+# Jack
+ifeq ($(ANDROID_JACK_VM_ARGS),)
+ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
+endif
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
