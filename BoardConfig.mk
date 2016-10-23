@@ -177,6 +177,7 @@ TW_TARGET_USES_QCOM_BSP := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_RILD := true
 BOARD_RIL_CLASS += ../../../device/oneplus/onyx/ril
 
 # RPC
