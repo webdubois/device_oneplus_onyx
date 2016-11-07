@@ -72,6 +72,7 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+    chmod 0644 /proc/cmdline
 
     # Charger
     chown root system /sys/module/qpnp_charger/parameters/charger_monitor
