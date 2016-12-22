@@ -380,6 +380,7 @@ on property:hw.fm.init=0
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
+    group system wakelock
 
 service rfs_access /system/bin/rfs_access
     class core
@@ -390,12 +391,12 @@ service rfs_access /system/bin/rfs_access
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps qcom_diag wakelock
 
 service netmgrd /system/bin/netmgrd
     class main
     user root
-    group radio
+    group radio system wakelock
 
 # QCOM sensor
 service sensors /system/bin/sensors.qcom
@@ -416,8 +417,9 @@ on property:sys.boot_completed=1
     restart media
 
 service cnd /system/bin/cnd
-    class late_start
+    class main
     socket cnd stream 660 root inet
+    group root wakelock
 
 service dpmd /system/bin/dpmd
     class late_start
