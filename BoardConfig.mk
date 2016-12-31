@@ -167,9 +167,6 @@ BOARD_RIL_CLASS += ../../../device/oneplus/onyx/ril
 # RPC
 TARGET_NO_RPC := true
 
-# Legacy Blobs
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
