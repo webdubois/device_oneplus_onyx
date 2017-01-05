@@ -7,9 +7,9 @@
     },
     {
         "remote": "github",
-        "repository": "ashwinr64/proprietary_vendor_oneplus",
+        "repository": "YumeMichi/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
-        "revision": "cm-14.1"
+        "revision": "android-7.1"
     },
     {
         "remote": "github",
