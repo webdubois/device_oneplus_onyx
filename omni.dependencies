@@ -22,6 +22,12 @@
   },
   {
     "remote":       "omnirom",
+    "repository":   "android_packages_apps_SnapdragonCamera",
+    "target_path":  "packages/apps/SnapdragonCamera",
+    "revision":     "android-7.1"
+  },
+  {
+    "remote":       "omnirom",
     "repository":   "android_external_ant-wireless_antradio-library",
     "target_path":  "external/ant-wireless/antradio-library",
     "revision":     "android-7.1"
