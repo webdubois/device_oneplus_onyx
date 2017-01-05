@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OneplusDoze
 
+# Find7Parts
+PRODUCT_PACKAGES += \
+    Find7Parts
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
