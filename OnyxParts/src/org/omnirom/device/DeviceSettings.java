@@ -36,16 +36,16 @@ public class DeviceSettings extends PreferenceActivity implements
     public static final String KEY_CAMERA_SWITCH = "camera";
     public static final String KEY_TORCH_SWITCH = "torch";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
-    public static final String KEY_OCLICK_CATEGORY = "oclick_category";
-    public static final String KEY_OCLICK = "oclick";
-    public static final String KEY_BACK_BUTTON = "back_button";
-    public static final String KEY_BUTTON_CATEGORY = "button_category";
+    public static final String KEY_MUSIC_SWITCH = "music";
+    private static final String KEY_SLIDER_MODE = "slider_mode";
+    private static final String KEY_SWAP_BACK_RECENTS = "swap_back_recents";
 
     private TwoStatePreference mTorchSwitch;
     private TwoStatePreference mCameraSwitch;
     private VibratorStrengthPreference mVibratorStrength;
-    private Preference mOClickPreference;
-    private ListPreference mBackButton;
+    private TwoStatePreference mMusicSwitch;
+    private ListPreference mSliderMode;
+    private TwoStatePreference mSwapBackRecents;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,29 +65,27 @@ public class DeviceSettings extends PreferenceActivity implements
         mCameraSwitch.setOnPreferenceChangeListener(new CameraGestureSwitch());
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
-
-        final boolean oclickEnabled = getResources().getBoolean(R.bool.config_has_oclick);
-        PreferenceCategory oclickCategory = (PreferenceCategory) findPreference(KEY_OCLICK_CATEGORY);
-        if (!oclickEnabled) {
-            getPreferenceScreen().removePreference(oclickCategory);
+        if (mVibratorStrength != null) {
+            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         }
-        mOClickPreference = (Preference) findPreference(KEY_OCLICK);
 
-        PreferenceCategory buttonCategory = (PreferenceCategory) findPreference(KEY_BUTTON_CATEGORY);
-        mBackButton = (ListPreference) findPreference(KEY_BACK_BUTTON);
-        final boolean backButtonEnabled = getResources().getBoolean(R.bool.config_has_back_button);
-        if (!backButtonEnabled) {
-            getPreferenceScreen().removePreference(buttonCategory);
-        }
-        mBackButton.setOnPreferenceChangeListener(this);
-        int keyCode = Settings.System.getInt(getContentResolver(),
+        mMusicSwitch = (TwoStatePreference) findPreference(KEY_MUSIC_SWITCH);
+        mMusicSwitch.setEnabled(MusicGestureSwitch.isSupported());
+        mMusicSwitch.setChecked(MusicGestureSwitch.isEnabled(this));
+        mMusicSwitch.setOnPreferenceChangeListener(new MusicGestureSwitch());
+
+        mSliderMode = (ListPreference) findPreference(KEY_SLIDER_MODE);
+        mSliderMode.setOnPreferenceChangeListener(this);
+        int sliderMode = Settings.System.getInt(getContentResolver(),
                     Settings.System.BUTTON_EXTRA_KEY_MAPPING, 0);
-        if (keyCode != 0) {
-            int valueIndex = mBackButton.findIndexOfValue(String.valueOf(keyCode));
-            mBackButton.setValueIndex(valueIndex);
-            mBackButton.setSummary(mBackButton.getEntries()[valueIndex]);
-        }
+        int valueIndex = mSliderMode.findIndexOfValue(String.valueOf(sliderMode));
+        mSliderMode.setValueIndex(valueIndex);
+        mSliderMode.setSummary(mSliderMode.getEntries()[valueIndex]);
+
+        mSwapBackRecents = (TwoStatePreference) findPreference(KEY_SWAP_BACK_RECENTS);
+        mSwapBackRecents.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.BUTTON_SWAP_BACK_RECENTS, 0) != 0);
+
     }
 
     @Override
@@ -104,9 +102,9 @@ public class DeviceSettings extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mOClickPreference) {
-            Intent i = new Intent(Intent.ACTION_MAIN).setClassName("org.omnirom.omniclick","org.omnirom.omniclick.OClickControlActivity");
-            startActivity(i);
+        if (preference == mSwapBackRecents) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.BUTTON_SWAP_BACK_RECENTS, mSwapBackRecents.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -114,14 +112,14 @@ public class DeviceSettings extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mBackButton) {
+        if (preference == mSliderMode) {
             String value = (String) newValue;
-            int keyCode = Integer.valueOf(value);
+            int sliderMode = Integer.valueOf(value);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.BUTTON_EXTRA_KEY_MAPPING, keyCode);
-            int valueIndex = mBackButton.findIndexOfValue(value);
-            mBackButton.setSummary(mBackButton.getEntries()[valueIndex]);
-         }
+                    Settings.System.BUTTON_EXTRA_KEY_MAPPING, sliderMode);
+            int valueIndex = mSliderMode.findIndexOfValue(value);
+            mSliderMode.setSummary(mSliderMode.getEntries()[valueIndex]);
+        }
         return true;
     }
 }

@@ -113,9 +113,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OneplusDoze
 
-# Find7Parts
+# OnyxParts
 PRODUCT_PACKAGES += \
-    Find7Parts
+    OnyxParts
 
 # Graphics
 PRODUCT_PACKAGES += \
