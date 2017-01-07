@@ -1,12 +1,6 @@
 [
     {
         "remote": "github",
-        "repository": "AOSP-onyx/device_oppo_common",
-        "target_path": "device/oppo/common",
-        "revision": "7.1.1"
-    },
-    {
-        "remote": "github",
         "repository": "YumeMichi/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
         "revision": "android-7.1"

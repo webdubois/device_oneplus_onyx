@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# inherit from Oppo common
--include device/oppo/common/BoardConfigCommon.mk
-
 PLATFORM_PATH := device/oneplus/onyx
 
 # Assertions
@@ -154,6 +151,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
+TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # Protobuf-c
 PROTOBUF_SUPPORTED := true
