@@ -38,7 +38,7 @@ public class DeviceSettings extends PreferenceActivity implements
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_MUSIC_SWITCH = "music";
     private static final String KEY_SLIDER_MODE = "slider_mode";
-    private static final String KEY_SWAP_BACK_RECENTS = "swap_back_recents";
+    //private static final String KEY_SWAP_BACK_RECENTS = "swap_back_recents";
 
     private TwoStatePreference mTorchSwitch;
     private TwoStatePreference mCameraSwitch;
@@ -82,10 +82,9 @@ public class DeviceSettings extends PreferenceActivity implements
         mSliderMode.setValueIndex(valueIndex);
         mSliderMode.setSummary(mSliderMode.getEntries()[valueIndex]);
 
-        mSwapBackRecents = (TwoStatePreference) findPreference(KEY_SWAP_BACK_RECENTS);
-        mSwapBackRecents.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.BUTTON_SWAP_BACK_RECENTS, 0) != 0);
-
+        //mSwapBackRecents = (TwoStatePreference) findPreference(KEY_SWAP_BACK_RECENTS);
+        //mSwapBackRecents.setChecked(Settings.System.getInt(getContentResolver(),
+        //            Settings.System.BUTTON_SWAP_BACK_RECENTS, 0) != 0);
     }
 
     @Override
@@ -102,11 +101,11 @@ public class DeviceSettings extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mSwapBackRecents) {
+        /*if (preference == mSwapBackRecents) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_SWAP_BACK_RECENTS, mSwapBackRecents.isChecked() ? 1 : 0);
             return true;
-        }
+        }*/
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
