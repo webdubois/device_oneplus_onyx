@@ -206,6 +206,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_oppo
 
+# SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
