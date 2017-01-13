@@ -42,6 +42,18 @@
         "revision": "cm-14.1"
     },
     {
+        "remote": "github",
+        "repository": "LineageOS/android_external_ffmpeg",
+        "target_path": "external/ffmpeg",
+        "revision": "cm-14.1"
+    },
+    {
+        "remote": "github",
+        "repository": "LineageOS/android_external_stagefright-plugins",
+        "target_path": "external/stagefright-plugins",
+        "revision": "cm-14.1"
+    },
+    {
         "remote": "omnirom",
         "repository": "android_external_ant-wireless_antradio-library",
         "target_path": "external/ant-wireless/antradio-library",
