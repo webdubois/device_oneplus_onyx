@@ -285,10 +285,10 @@ public class KeyHandler implements DeviceKeyHandler {
         mButtonDisabled = Settings.System.getInt(
                 context.getContentResolver(), Settings.System.HARDWARE_KEYS_DISABLE, 0) == 1;
         if (DEBUG) Log.i(TAG, "setButtonDisable=" + mButtonDisabled);
-        if(mButtonDisabled)
-            Utils.writeValue(KEY_CONTROL_PATH, "1");
-        else
+        if (mButtonDisabled)
             Utils.writeValue(KEY_CONTROL_PATH, "0");
+        else
+            Utils.writeValue(KEY_CONTROL_PATH, "1");
     }
 
     @Override
