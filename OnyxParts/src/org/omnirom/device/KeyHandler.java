@@ -51,7 +51,8 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final boolean DEBUG = true;
     protected static final int GESTURE_REQUEST = 1;
     private static final int GESTURE_WAKELOCK_DURATION = 2000;
-    private static String KEY_CONTROL_PATH = "/proc/touchpanel/keypad_enable";
+    private static final String KEY_CONTROL_PATH = "/proc/touchpanel/keypad_enable";
+    private static final String BUTTON_SWAP_NODE = "/proc/s1302/key_rep";
 
     // Supported scancodes
     //#define KEY_GESTURE_CIRCLE      250 // draw circle to lunch camera
@@ -114,6 +115,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private Handler mHandler = new Handler();
     private SettingsObserver mSettingsObserver;
     private static boolean mButtonDisabled;
+    private static boolean mSwapBackRecents;
     private final NotificationManager mNoMan;
     private final AudioManager mAudioManager;
     private CameraManager mCameraManager;
@@ -129,6 +131,9 @@ public class KeyHandler implements DeviceKeyHandler {
             mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HARDWARE_KEYS_DISABLE),
                     false, this);
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.SWAP_BACK_RECENTS),
+                    false, this);
             update();
         }
 
@@ -139,6 +144,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
         public void update() {
             setButtonDisable(mContext);
+            setSwapBackRecents(mContext);
         }
     }
 
@@ -275,6 +281,11 @@ public class KeyHandler implements DeviceKeyHandler {
         return false;
     }
 
+    @Override
+    public boolean isSwapBackRecentsEvent(KeyEvent event) {
+        return false;
+    }
+
     private Message getMessageForKeyEvent(KeyEvent keyEvent) {
         Message msg = mEventHandler.obtainMessage(GESTURE_REQUEST);
         msg.obj = keyEvent;
@@ -289,6 +300,16 @@ public class KeyHandler implements DeviceKeyHandler {
             Utils.writeValue(KEY_CONTROL_PATH, "0");
         else
             Utils.writeValue(KEY_CONTROL_PATH, "1");
+    }
+
+    public static void setSwapBackRecents(Context context) {
+        mSwapBackRecents = Settings.System.getInt(
+                context.getContentResolver(), Settings.System.SWAP_BACK_RECENTS, 0) == 1;
+        if (DEBUG) Log.i(TAG, "setSwapBackRecents=" + mSwapBackRecents);
+        if (mSwapBackRecents)
+            Utils.writeValue(BUTTON_SWAP_NODE, "1");
+        else
+            Utils.writeValue(BUTTON_SWAP_NODE, "0");
     }
 
     @Override
