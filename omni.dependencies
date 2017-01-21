@@ -13,9 +13,9 @@
     },
     {
         "remote": "github",
-        "repository": "CheckYourScreen/Arsenic.Kernel",
+        "repository": "YumeMichi/kernel_oneplus_onyx",
         "target_path": "kernel/oneplus/onyx",
-        "revision": "stable"
+        "revision": "android-7.1"
     },
     {
         "remote": "github",
@@ -43,7 +43,7 @@
     },
     {
         "remote": "github",
-        "repository": "LineageOS/android_external_ffmpeg",
+        "repository": "Omni-onyx/android_external_ffmpeg",
         "target_path": "external/ffmpeg",
         "revision": "cm-14.1"
     },
@@ -88,12 +88,6 @@
         "repository": "android_hardware_qcom_audio-caf-msm8974",
         "target_path": "hardware/qcom/audio-caf-msm8974",
         "revision": "android-7.0"
-    },
-    {
-        "remote": "omnirom",
-        "repository": "android_vendor_codeaurora_telephony",
-        "target_path": "vendor/codeaurora/telephony",
-        "revision": "android-7.1"
     },
     {
         "remote": "omnirom",
