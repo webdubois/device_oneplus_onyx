@@ -334,6 +334,9 @@
     <!-- Enable doze powersaving -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Disable wakeup during Netwoek Sampling -->
+    <bool name="config_networkSamplingWakesDevice">false</bool>
+
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
 
