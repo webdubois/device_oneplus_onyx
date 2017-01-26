@@ -40,4 +40,6 @@
     <string name="graphics_title">图形</string>
     <string name="hbm_mode_summary">最大化屏幕亮度以便于能在阳光下看清屏幕内容</string>
     <string name="hbm_mode_title">高亮模式</string>
+    <string name="proxi_summary_head">处理手势前先检查距离传感器</string>
+    <string name="proxi_title_head">距离检查</string>
 </resources>

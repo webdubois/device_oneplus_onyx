@@ -40,4 +40,6 @@
     <string name="buttons_title">Buttons</string>
     <string name="swap_back_recents_title">Swap keys</string>
     <string name="swap_back_recents_summary">Swap back and recents button</string>
+    <string name="proxi_summary_head">Check proximity sensor for handling gestures</string>
+    <string name="proxi_title_head">Proximity check</string>
 </resources>
