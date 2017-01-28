@@ -1,9 +1,9 @@
 [
     {
         "remote": "github",
-        "repository": "LineageOS/android_device_qcom_common",
+        "repository": "Omni-onyx/android_device_qcom_common",
         "target_path": "device/qcom/common",
-        "revision": "cm-14.1"
+        "revision": "android-7.1"
     },
     {
         "remote": "github",
@@ -72,22 +72,22 @@
         "revision": "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_hardware_qcom_display-caf-msm8974",
+        "remote": "github",
+        "repository": "Omni-onyx/android_hardware_qcom_display-caf-msm8974",
         "target_path": "hardware/qcom/display-caf-msm8974",
-        "revision": "android-7.0"
+        "revision": "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_hardware_qcom_media-caf-msm8974",
+        "remote": "github",
+        "repository": "Omni-onyx/android_hardware_qcom_media-caf-msm8974",
         "target_path": "hardware/qcom/media-caf-msm8974",
-        "revision": "android-7.0"
+        "revision": "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_hardware_qcom_audio-caf-msm8974",
+        "remote": "github",
+        "repository": "Omni-onyx/android_hardware_qcom_audio-caf-msm8974",
         "target_path": "hardware/qcom/audio-caf-msm8974",
-        "revision": "android-7.0"
+        "revision": "android-7.1"
     },
     {
         "remote": "omnirom",
@@ -100,5 +100,11 @@
         "repository": "vendor_qcom_opensource_dataservices",
         "target_path": "vendor/qcom/opensource/dataservices",
         "revision": "android-7.1"
+    },
+    {
+        "remote": "github",
+        "repository": "LineageOS/android_vendor_qcom_opensource_bluetooth",
+        "target_path": "vendor/qcom/opensource/bluetooth",
+        "revision": "cm-14.1"
     }
 ]
