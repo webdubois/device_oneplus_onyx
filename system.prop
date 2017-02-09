@@ -128,3 +128,6 @@ wifi.interface=wlan0
 
 # sdcardfs
 ro.sys.sdcardfs=true
+
+# Google Assistant
+ro.opa.eligible_device=true
