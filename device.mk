@@ -117,10 +117,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OnyxParts
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothExt
-
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
