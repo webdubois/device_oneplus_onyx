@@ -43,7 +43,7 @@
     },
     {
         "remote": "github",
-        "repository": "Omni-onyx/android_external_ffmpeg",
+        "repository": "LineageOS/android_external_ffmpeg",
         "target_path": "external/ffmpeg",
         "revision": "cm-14.1"
     },
