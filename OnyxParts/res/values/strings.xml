@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014-2016 The OmniROM Project
+<!-- Copyright (C) 2014-2017 The OmniROM Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -32,8 +32,15 @@
         • Draw right arrow (\'&#62;\') for next track</string>
     <string name="category_slider">Notification Slider</string>
     <string name="slider_mode_title">Slider mode</string>
-    <string name="slider_mode_zen">Do not disturb</string>
-    <string name="slider_mode_ringer">Ringer mode</string>
+    <string name="slider_mode_off">Off</string>
+    <string name="slider_mode_vibrate">Vibrate</string>
+    <string name="slider_mode_silent">Silent</string>
+    <string name="slider_mode_priority">Priority only</string>
+    <string name="slider_mode_alarm">Alarms only</string>
+    <string name="slider_mode_dnd">Total silence</string>
+    <string name="slider_mode_title_top">Top position</string>
+    <string name="slider_mode_title_center">Center position</string>
+    <string name="slider_mode_title_bottom">Bottom position</string>
     <string name="graphics_title">Graphics</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">High brightness mode</string>
