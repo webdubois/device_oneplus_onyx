@@ -31,9 +31,15 @@
         • 画左箭头 (\'&lt;\') 切换到上一首\n 
         • 画右箭头 (\'&gt;\') 切换到下一首</string>
     <string name="category_slider">三段式通知滑钮</string>
-    <string name="slider_mode_title">滑钮模式</string>
-    <string name="slider_mode_zen">请勿打扰</string>
-    <string name="slider_mode_ringer">响铃模式</string>
+    <string name="slider_mode_off">无</string>
+    <string name="slider_mode_vibrate">振动</string>
+    <string name="slider_mode_silent">静音</string>
+    <string name="slider_mode_priority">仅限优先</string>
+    <string name="slider_mode_alarm">仅限闹铃</string>
+    <string name="slider_mode_dnd">总是静音</string>
+    <string name="slider_mode_title_top">顶部位置</string>
+    <string name="slider_mode_title_center">中间位置</string>
+    <string name="slider_mode_title_bottom">底部位置</string>
     <string name="buttons_title">按钮</string>
     <string name="swap_back_recents_summary">交换最近应用和后退按钮的顺序</string>
     <string name="swap_back_recents_title">交换按钮</string>

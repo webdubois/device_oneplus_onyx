@@ -31,7 +31,6 @@
         • Draw left arrow (\'&#60;\') for previous track\n
         • Draw right arrow (\'&#62;\') for next track</string>
     <string name="category_slider">Notification Slider</string>
-    <string name="slider_mode_title">Slider mode</string>
     <string name="slider_mode_off">Off</string>
     <string name="slider_mode_vibrate">Vibrate</string>
     <string name="slider_mode_silent">Silent</string>
