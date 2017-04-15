@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OneplusDoze
+    OnyxDoze
 
 # OnyxParts
 PRODUCT_PACKAGES += \
