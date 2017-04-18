@@ -28,7 +28,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/oneplus/onyx/device.mk)
 
 # Call the proprietary setup
-$(call inherit-product-if-exists, vendor/oneplus/onyx/onyx-vendor.mk)
+$(call inherit-product, vendor/oneplus/onyx/onyx-vendor.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8974
