@@ -117,6 +117,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OnyxParts
 
+PRODUCT_PACKAGES += \
+    omni_charger_res_images
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
