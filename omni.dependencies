@@ -15,11 +15,11 @@
         "remote": "github",
         "repository": "YumeMichi/kernel_oneplus_onyx",
         "target_path": "kernel/oneplus/onyx",
-        "revision": "android-7.1"
+        "revision": "cm-14.1"
     },
     {
         "remote": "github",
-        "repository": "LineageOS/android_packages_apps_Snap",
+        "repository": "DirtyUnicorns-onyx/android_packages_apps_Snap",
         "target_path": "packages/apps/Snap",
         "revision": "cm-14.1"
     },
