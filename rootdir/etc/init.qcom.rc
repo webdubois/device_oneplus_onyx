@@ -19,8 +19,10 @@ import init.qcom.power.rc
 import init.omni.rc
 
 on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0775 /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
-    mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
+    symlink /proc/wakeup /d
 
 on init
     export LD_SHIM_LIBS "/system/lib/libgui.so|libshims_sensors.so"
@@ -98,6 +100,20 @@ on boot
     # For setting tcp delayed ack
     chown system system /sys/kernel/ipv4/tcp_delack_seg
     chown system system /sys/kernel/ipv4/tcp_use_userconfig
+
+#   Define TCP buffer sizes for various networks
+#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+    setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
+    setprop net.tcp.buffersize.lte     524288,1048576,2097152,262144,524288,1048576
+    setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
+    setprop net.tcp.buffersize.hspa    4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hsupa   4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hsdpa   4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hspap   4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
+    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
+    setprop net.tcp.buffersize.evdo    4094,87380,262144,4096,16384,262144
+    setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
 
 #   Define TCP delayed ack settings for WiFi & LTE
     setprop net.tcp.delack.default     1
@@ -211,6 +227,13 @@ on post-fs
 
     chown system system /sys/devices/virtual/graphics/fb0/dyn_pu
     chmod 0660 /sys/devices/virtual/graphics/fb0/dyn_pu
+
+    chown system system /sys/class/timed_output/vibrator/vtg_level
+    chown system system /sys/class/timed_output/vibrator/vtg_max
+    chown system system /sys/class/timed_output/vibrator/vtg_min
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_level
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_max
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_min
 
     # LEDs
     chown system system /sys/class/leds/rgb/rgb_blink
