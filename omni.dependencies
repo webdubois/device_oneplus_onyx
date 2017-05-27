@@ -15,7 +15,7 @@
         "remote": "github",
         "repository": "YumeMichi/kernel_oneplus_onyx",
         "target_path": "kernel/oneplus/onyx",
-        "revision": "cm-14.1"
+        "revision": "stable-laos"
     },
     {
         "remote": "github",
