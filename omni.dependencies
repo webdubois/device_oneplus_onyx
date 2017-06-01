@@ -1,98 +1,98 @@
 [
     {
-        "remote": "github",
-        "repository": "Omni-onyx/android_device_qcom_common",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_device_qcom_common",
         "target_path": "device/qcom/common",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "github",
-        "repository": "YumeMichi/proprietary_vendor_oneplus",
+        "remote":      "github",
+        "repository":  "YumeMichi/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "github",
-        "repository": "YumeMichi/kernel_oneplus_onyx",
+        "remote":      "github",
+        "repository":  "YumeMichi/kernel_oneplus_onyx",
         "target_path": "kernel/oneplus/onyx",
-        "revision": "stable-laos"
+        "revision":    "stable-laos"
     },
     {
-        "remote": "github",
-        "repository": "DirtyUnicorns-onyx/android_packages_apps_Snap",
+        "remote":      "github",
+        "repository":  "DirtyUnicorns-onyx/android_packages_apps_Snap",
         "target_path": "packages/apps/Snap",
-        "revision": "cm-14.1"
+        "revision":    "cm-14.1"
     },
     {
-        "remote": "github",
-        "repository": "LineageOS/android_packages_apps_FMRadio",
+        "remote":      "github",
+        "repository":  "LineageOS/android_packages_apps_FMRadio",
         "target_path": "packages/apps/FMRadio",
-        "revision": "cm-14.1"
+        "revision":    "cm-14.1"
     },
     {
-        "remote": "github",
-        "repository": "LineageOS/android_hardware_qcom_fm",
+        "remote":      "github",
+        "repository":  "LineageOS/android_hardware_qcom_fm",
         "target_path": "hardware/qcom/fm",
-        "revision": "cm-14.1"
+        "revision":    "cm-14.1"
     },
     {
-        "remote": "github",
-        "repository": "LineageOS/android_external_ffmpeg",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_external_ffmpeg",
         "target_path": "external/ffmpeg",
-        "revision": "cm-14.1"
+        "revision":    "cm-14.1"
     },
     {
-        "remote": "github",
-        "repository": "LineageOS/android_external_stagefright-plugins",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_external_stagefright-plugins",
         "target_path": "external/stagefright-plugins",
-        "revision": "cm-14.1"
+        "revision":    "cm-14.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_external_ant-wireless_antradio-library",
+        "remote":      "omnirom",
+        "repository":  "android_external_ant-wireless_antradio-library",
         "target_path": "external/ant-wireless/antradio-library",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_external_ant-wireless_ant_service",
+        "remote":      "omnirom",
+        "repository":  "android_external_ant-wireless_ant_service",
         "target_path": "external/ant-wireless/ant_service",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_external_ant-wireless_ant_native",
+        "remote":      "omnirom",
+        "repository":  "android_external_ant-wireless_ant_native",
         "target_path": "external/ant-wireless/ant_native",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "github",
-        "repository": "Omni-onyx/android_hardware_qcom_display-caf-msm8974",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_hardware_qcom_display-caf-msm8974",
         "target_path": "hardware/qcom/display-caf-msm8974",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "github",
-        "repository": "Omni-onyx/android_hardware_qcom_media-caf-msm8974",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_hardware_qcom_media-caf-msm8974",
         "target_path": "hardware/qcom/media-caf-msm8974",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "github",
-        "repository": "Omni-onyx/android_hardware_qcom_audio-caf-msm8974",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_hardware_qcom_audio-caf-msm8974",
         "target_path": "hardware/qcom/audio-caf-msm8974",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "android_device_qcom_caf-sepolicy",
+        "remote":      "github",
+        "repository":  "Omni-onyx/android_device_qcom_caf-sepolicy",
         "target_path": "device/qcom/sepolicy",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     },
     {
-        "remote": "omnirom",
-        "repository": "vendor_qcom_opensource_dataservices",
+        "remote":      "omnirom",
+        "repository":  "vendor_qcom_opensource_dataservices",
         "target_path": "vendor/qcom/opensource/dataservices",
-        "revision": "android-7.1"
+        "revision":    "android-7.1"
     }
 ]
