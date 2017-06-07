@@ -21,8 +21,8 @@
 # Backlight
 /sys/class/leds/lcd-backlight/brightness                u:object_r:touchscreen_file:s0
 
-# Gestures
-/sys/devices/virtual/timed_output/vibrator/vtg_level    u:object_r:sysfs_vibrator:s0
+# Vibrator
+/sys/devices/virtual/timed_output/vibrator(/.*)?        u:object_r:sysfs_vibrator:s0
 
 # HBM
 /sys/devices/virtual/graphics/fb0/hbm                   u:object_r:sysfs_graphics:s0
