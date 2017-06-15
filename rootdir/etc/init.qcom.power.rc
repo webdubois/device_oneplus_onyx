@@ -112,4 +112,4 @@ on property:dev.bootcomplete=1
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90"
     write /sys/devices/system/cpu/sched_mc_power_savings 2
     setprop sys.io.scheduler "zen"
-    start mpdecision
+
