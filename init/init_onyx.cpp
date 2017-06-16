@@ -57,22 +57,22 @@ void vendor_load_properties()
 
     if (rf_version == "101") {
         /* China */
-        property_set("ro.product.model", "ONE E1001");
+        property_override("ro.product.model", "ONE E1001");
         property_set("ro.rf_version", "TDD_FDD_Ch_All");
         property_set("ro.telephony.default_network", "22");
     } else if (rf_version == "102") {
         /* Asia/Europe */
-        property_set("ro.product.model", "ONE E1003");
+        property_override("ro.product.model", "ONE E1003");
         property_set("ro.rf_version", "TDD_FDD_Eu");
         property_set("ro.telephony.default_network", "9");
     } else if (rf_version == "103"){
         /* America */
-        property_set("ro.product.model", "ONE E1005");
+        property_override("ro.product.model", "ONE E1005");
         property_set("ro.rf_version", "TDD_FDD_Am");
         property_set("ro.telephony.default_network", "9");
     } else if (rf_version == "107"){
         /* China CTCC Version */
-        property_set("ro.product.model", "ONE E1000");
+        property_override("ro.product.model", "ONE E1000");
         property_set("ro.rf_version", "TDD_FDD_ALL_OPTR");
         property_set("ro.telephony.default_network", "22");
     }
