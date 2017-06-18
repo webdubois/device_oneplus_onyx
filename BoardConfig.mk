@@ -52,6 +52,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 # Fixes Wifi-Mobile Data toggle issue
 MALLOC_SVELTE := true
 
+# Fixes Wifi-Mobile Data toggle issue
+MALLOC_SVELTE := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
