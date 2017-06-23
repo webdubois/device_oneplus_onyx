@@ -9,7 +9,7 @@
         "remote":      "github",
         "repository":  "YumeMichi/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
-        "revision":    "android-7.1"
+        "revision":    "android-7.1-oss"
     },
     {
         "remote":      "github",
