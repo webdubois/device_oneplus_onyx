@@ -9,7 +9,7 @@
         "remote":      "github",
         "repository":  "YumeMichi/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
-        "revision":    "android-7.1-oss"
+        "revision":    "android-7.1"
     },
     {
         "remote":      "github",
@@ -19,9 +19,9 @@
     },
     {
         "remote":      "github",
-        "repository":  "DirtyUnicorns-onyx/android_packages_apps_Snap",
+        "repository":  "CertifiedBlyndGuy/android_packages_apps_Snap",
         "target_path": "packages/apps/Snap",
-        "revision":    "cm-14.1"
+        "revision":    "onyx/cm-14.1-sultan"
     },
     {
         "remote":      "github",
@@ -64,6 +64,12 @@
         "repository":  "android_external_ant-wireless_ant_native",
         "target_path": "external/ant-wireless/ant_native",
         "revision":    "android-7.1"
+    },
+    {
+        "remote":      "github",
+        "repository":  "YumeMichi/android_hardware_qcom_camera",
+        "target_path": "hardware/qcom/camera",
+        "revision":    "android-7.1-onyx"
     },
     {
         "remote":      "github",
