@@ -19,7 +19,7 @@
     },
     {
         "remote":      "github",
-        "repository":  "CertifiedBlyndGuy/android_packages_apps_Snap",
+        "repository":  "Omni-onyx/android_packages_apps_Snap",
         "target_path": "packages/apps/Snap",
         "revision":    "onyx/cm-14.1-sultan"
     },
