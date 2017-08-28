@@ -112,6 +112,4 @@ on property:dev.bootcomplete=1
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1958400
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1958400
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1958400
-    # Improve color accuracy
-    write /sys/devices/platform/kcal_ctrl.0/kcal "245 245 256"
-    write /sys/devices/platform/kcal_ctrl.0/kcal_sat 278
+
