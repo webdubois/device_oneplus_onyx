@@ -15,7 +15,7 @@
         "remote":      "github",
         "repository":  "YumeMichi/kernel_oneplus_onyx",
         "target_path": "kernel/oneplus/onyx",
-        "revision":    "android-7.1"
+        "revision":    "stable-laos"
     },
     {
         "remote":      "github",
