@@ -110,9 +110,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Extended filesystem support
 TARGET_EXFAT_DRIVER := sdfat
 
-# Workaround for factory issue
-BOARD_VOLD_CRYPTFS_MIGRATE := true
-
 # FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
