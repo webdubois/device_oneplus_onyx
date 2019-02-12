@@ -540,11 +540,6 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service pfm /system/bin/pfm
-    class late_start
-    user system
-    group system drmrpc mount
-
 service ril-daemon1 /vendor/bin/hw/rild -c 2
     class main
     user radio
