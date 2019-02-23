@@ -265,6 +265,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
+
 # Thermal config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/vendor/etc/thermal-engine-8974.conf
