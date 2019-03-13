@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015-2016 The CyanogenMod Project
-#               2017-2018 The LineageOS Project
+#               2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,4 +47,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := OnePlus/OnePlus/OnePlus:6.0.1/MMB29M/10281213:user/release-keys
 
 # Unofficial build ID
-TARGET_UNOFFICIAL_BUILD_ID := YumeMichi
+TARGET_UNOFFICIAL_BUILD_ID := WEBDuBois
